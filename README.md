@@ -1,8 +1,7 @@
-SCKLS Parent Theme
+cornishmemory.com Omeka theme
 ==================
 
-Parent Omeka theme developed for South Central Kansas Library System (SCKLS), created by Interactive Mechanics.
-
+A fork of the SCKLS Parent Theme by Interactive Mechanics, with customisations.
 
 Customization Features:
   *  Title
@@ -12,4 +11,4 @@ Customization Features:
   *  Primary site color
   *  Toggle "featured" content on the homepage
   *  Footer logos (up to 3)
-  *  Custom Google search via SCKLS
+  *  Custom Google search
