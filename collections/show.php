@@ -10,13 +10,16 @@ if ($collectionTitle == '') {
 <div class="container">
     <div class="content-block">
         <h1><?php echo $collectionTitle; ?></h1>
+		
         <p><?php echo metadata('collection', array('Dublin Core', 'Description')); ?></p>
+		<p><?php echo link_to_items_browse(__('View all items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></p>
+		<h2>Browse first 10 items</h2>
         
         <?php if (metadata('collection', 'total_items') > 0): ?>
         <div class="browse-items">
             <?php
                 $sortLinks[__('Title')] = 'Dublin Core,Title';
-                $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+                $sortLinks[__('Creator')] = 'Dublin Core,Collection';
                 ?>
             <div class="browse-items-header hidden-xs">
                 <div class="row">
@@ -24,13 +27,13 @@ if ($collectionTitle == '') {
                         <?php echo browse_sort_links(array('Title'=>'Dublin Core,Title'), array('')); ?>
                     </div>
                     <div class="col-sm-3 col-md-2">
-                        <?php echo browse_sort_links(array('Creator'=>'Dublin Core,Creator'), array('')); ?>
+                        <?php // echo browse_sort_links(array('Collection'=>'Dublin Core,Collection'), array('')); ?>
                     </div>
                     <div class="hidden-sm col-md-2">
-                        Subject
+                        Place
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        Description
+                        Date
                     </div>
                 </div>
             </div>
@@ -54,13 +57,14 @@ if ($collectionTitle == '') {
                         <?php echo metadata('item', array('Dublin Core', 'Creator')); ?>
                     </div>
                     <div class="hidden-sm col-md-2">
-                        <?php echo metadata('item', array('Dublin Core', 'Subject')); ?>
+                        <?php echo metadata('item', array('Dublin Core', 'Coverage')); ?>
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <?php echo metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150)); ?>
+                        <?php echo metadata('item', array('Dublin Core', 'Date'), array('snippet'=>150)); ?>
                     </div>
                 
-                    <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+                    <?php // fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+					
                 </div>
             </div>
             <?php endforeach; ?>
@@ -70,7 +74,7 @@ if ($collectionTitle == '') {
             <div class="alert alert-warning">There are currently no items within this collection.</div>
         <?php endif; ?>
 
-        <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
+        <?php // fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
     </div>
 </div>
 

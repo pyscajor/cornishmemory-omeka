@@ -19,17 +19,18 @@
                     <?php $image = $item->Files; ?>
                     <?php if ($image): ?>
                     <div class="item">
-                        <?php
-                            echo '  <a href="' . record_url($item, null, true) . '">';
-                            echo '    <div class="overlay"></div>';
-                            if ($image) {
-                                echo '<div style="background-image: url(' . file_display_url($image[0], 'fullsize') . ');" class="img"></div>';
-                            } else {
-                                echo '<div style="background-image: url(' . img('defaultImage@2x.jpg') . ');" class="img default"></div>';
-                            }
-                    	    echo '    <span class="title">' . metadata('item', array('Dublin Core', 'Title')) . '</span>';
-                            echo '  </a>';
-                        ?>
+						<?php
+							
+						echo '  <a href="' . record_url($item, null, true) . '">';
+						echo '    <div class="overlay"></div>';
+								if (metadata('item', 'has thumbnail')):
+							echo '<div style="background-image: url(' . file_display_url($image[0], 'fullsize') . ');" class="img"></div>';
+							else:
+							echo '<div style="background-image: url(/themes/cornishmemory/images/fallback-video.png);" class="img"></div>';
+								endif;					                          
+						echo '    <span class="title">' . metadata('item', array('Dublin Core', 'Title')) . '</span>';
+						echo '  </a>';
+											                                ?>
                     </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

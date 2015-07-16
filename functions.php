@@ -101,7 +101,7 @@ function sckls_exhibit_builder_get_first_image_object($exhibit) {
         $exhibit = get_current_record('exhibit');
     }
     set_loop_records('exhibit_page', $exhibit->TopPages);
-    
+
     foreach (loop('exhibit_page') as $exhibitPage) {
         $attachments = $exhibitPage->getAllAttachments();
         foreach ($attachments as $attachment):
@@ -122,14 +122,14 @@ function sckls_exhibit_builder_get_first_image_html($exhibit) {
         $exhibit = get_current_record('exhibit');
     }
     set_loop_records('exhibit_page', $exhibit->TopPages);
-    
+
     foreach (loop('exhibit_page') as $exhibitPage) {
         $attachments = $exhibitPage->getAllAttachments();
         foreach ($attachments as $attachment):
             if ($count === 0){
                 $item = $attachment->getItem();
                 $file = $attachment->getFile();
-    
+
                 $html .= file_display_url($file, 'fullsize');
             }
             $count++;
@@ -145,7 +145,7 @@ function sckls_exhibit_builder_get_images($exhibit) {
         $exhibit = get_current_record('exhibit');
     }
     set_loop_records('exhibit_page', $exhibit->TopPages);
-    
+
     foreach (loop('exhibit_page') as $exhibitPage) {
         $attachments = $exhibitPage->getAllAttachments();
         foreach ($attachments as $attachment):
@@ -183,7 +183,7 @@ function sckls_exhibit_builder_page_nav($exhibitPage = null) {
         $linkText = $page->title;
         $pageExhibit = $page->getExhibit();
         $pageParent = $page->getParent();
-        $pageSiblings = ($pageParent ? exhibit_builder_child_pages($pageParent) : $pageExhibit->getTopPages()); 
+        $pageSiblings = ($pageParent ? exhibit_builder_child_pages($pageParent) : $pageExhibit->getTopPages());
 
         $html .= "<li>\n<ul class='nav nav-pills nav-stacked'>\n";
         foreach ($pageSiblings as $pageSibling) {
@@ -197,7 +197,7 @@ function sckls_exhibit_builder_page_nav($exhibitPage = null) {
     return $html;
 }
 
-function sckls_item_image_gallery($attrs = array(), $imageType = 'square_thumbnail', $filesShow = false, $item = null) {
+function sckls_item_image_gallery($attrs = array(), $imageType = 'fullsize', $filesShow = false, $item = null) {
     if (!$item) {
         $item = get_current_record('item');
     }
@@ -231,19 +231,22 @@ function sckls_item_image_gallery($attrs = array(), $imageType = 'square_thumbna
 
         // Setup list items with appropriate classes
         if (strstr($mime, 'image') == true) {
-            $html .= '<li data-src="' . $file->getWebPath('original') . '" class="' . $class . '">';
-        } elseif (strstr($mime, 'video') == true) {
-            $html .= '<li data-iframe="true" data-src="' . $file->getWebPath('original') . '?video" class="' . $class . '">';
-        } elseif (strstr($mime, 'pdf') == true) {
+            $html .= '<ul id="image-gallery" class="clearfix"><li data-src="' . $file->getWebPath('original') . '" class="' . $class . '">';
+			$html .= $image;
+        }  elseif (strstr($mime, 'video') == true) {
+           $html .= '<ul style="list-style: none"><li data-src="' . $file->getWebPath('original') . '"><video src="' . $file->getWebPath('original') . '" width="100%" controls>V</video><br><em>Click the play button to watch the video</em>';
+		   $html;
+        } 
+	  		elseif (strstr($mime, 'pdf') == true) {
             $html .= '<li data-iframe="true" data-src="' . $file->getWebPath('original') . '?pdf" class="' . $class . '">';
         } else {
             $html .= '<li data-iframe="true" data-src="' . $file->getWebPath('original') . '" class="' . $class . '">';
         }
 
         // Get the files/images
-        $html .= $image;
+ //       $html .= $image;
 
-        $html .= '</li>';
+        $html .= '</li></ul>';
         $count++;
     }
     return $html;

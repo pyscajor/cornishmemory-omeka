@@ -4,11 +4,11 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h3><?php echo link_to_home_page(); ?></h3>
-                    <p>South Central Kansas Library System<br>Copyright &copy; <?php echo date('Y'); ?> <?php echo option('site_title'); ?></p>
+                    <p>Azook CIC<br>Copyright &copy; <?php echo date('Y'); ?> <?php echo option('site_title'); ?> and collection owners.</p>
                 </div>
                 <div class="col-sm-6">
                     <div class="row partners">
-                        <?php 
+                        <?php
                             $logos = array(
                                 array( get_theme_option('Theme: Footer1'), get_theme_option('Theme: Footer1link')),
                                 array( get_theme_option('Theme: Footer2'), get_theme_option('Theme: Footer2link')),
@@ -41,7 +41,7 @@
             <form id="search-omeka-container" action="<?php echo public_url(''); ?>search" class="clearfix">
                 <?php echo search_form(array('show_advanced' => false)); ?>
             </form>
-            <?php 
+            <?php
                 $googleCode = get_theme_option('Theme: Googlecode');
             ?>
             <?php if($googleCode && !empty($googleCode)): ?>
@@ -70,7 +70,7 @@
     </div>
 	<?php fire_plugin_hook('public_footer'); ?>
 </div>
-<?php 
+<?php
     $statproject = get_theme_option('Theme: Statproject');
     $statsecurity = get_theme_option('Theme: Statsecurity');
 

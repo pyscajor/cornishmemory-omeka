@@ -33,7 +33,7 @@
 	<link rel="icon" type="image/png" href="<?php echo img('icons/favicon.png'); ?>" sizes="16x16" />
 
     <!-- Stylesheets -->
-    <?php 
+    <?php
     	queue_css_file('main');
     	queue_css_file('lib/bootstrap.min');
         queue_css_file('lib/slick');
@@ -41,7 +41,7 @@
    		echo head_css(); ?>
 
     <!-- Scripts -->
-    <?php 
+    <?php
 	    queue_js_url('http://code.jquery.com/jquery-1.11.0.min.js');
         queue_js_file('lib/bootstrap.min');
         queue_js_file('lib/slick.min');
@@ -67,7 +67,7 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 <div class="wrapper">
-    <nav class="navbar navbar-inverse navbar-default" role="navigation">
+	<nav class="navbar navbar-inverse navbar-default" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-button">
@@ -90,10 +90,12 @@
         <div class="overlay"></div>
         <div class="container">
             <?php if(!get_theme_option('Theme: Show')): ?>
-                <div class="branding">
+                <div class="logo">
+                  <div class="branding">
                     <h1><?php echo link_to_home_page(); ?></h1>
                     <h4><?php echo get_theme_option('Theme: Subtitle'); ?></h4>
-                </div>
+                  </div>
+                <div>
             <?php endif; ?>
         </div>
     </header>

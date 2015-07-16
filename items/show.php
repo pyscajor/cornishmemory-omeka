@@ -2,35 +2,53 @@
 
 <div class="container single-item">
     <div class="content-block">
-        <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?> <small><?php echo html_entity_decode(metadata('item', 'Collection Name')); ?></small></h1>
-        
+        <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?> <small></small></h1>
         <div class="row">
             <div class="col-sm-5">
                 <?php if (metadata('item', 'has files')): ?>
-                    <ul id="image-gallery" class="clearfix">
+                    <!-- <ul id="image-gallery" class="clearfix"> -->
                        <?php echo sckls_item_image_gallery(); ?>
-                    </ul>
+                       <?php // echo files_for_item(array('imageSize' => 'fullsize')); ?>
+                    <!-- </ul> -->
                 <?php else: ?>
-                    <img src="<?php echo img('defaultImage@2x.jpg'); ?>" style="max-width:100%;" />
+                    <p>Sorry, no image available.</p>
                 <?php endif; ?>
+                <?php
+                echo get_specific_plugin_hook_output('SocialBookmarking', 'public_items_show', array('view' => $this, 'item' => $item));
+                ?>
+                <hr>
+                <h6>Collection</h6>
+                <p><?php echo link_to_collection_for_item(); ?></p>
+                <!-- The following prints a list of all tags associated with the item -->
+                <?php if (metadata('item', 'has tags')): ?>
+                <div id="item-tags" class="element">
+                    <h6><?php echo __('Tags'); ?></h6>
+                    <div class="element-text"><?php echo tag_string('item'); ?></div>
+                </div>
+                <?php endif;?>
+                <!-- End Tags -->
+                <br>
+                <h6>Citation</h6>
+                <?php echo metadata('item', 'citation', array('no_escape' => true)); ?>
+                <hr>
+                <?php
+                echo get_specific_plugin_hook_output('Corrections', 'public_items_show', array('view' => $this, 'item' => $item));
+                ?>
             </div>
             <div class="col-sm-7">
                 <?php echo all_element_texts('item', array(false, false)); ?>
-                <?php $images = $item->Files; ?>
-                <?php if ($images): ?>
-                    <h6>Files</h6>
-                    <ul>
-                        <?php foreach ($images as $image): ?>
-                            <li><?php echo link_to_file_show(array(), '',$image); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <hr>
-                <?php endif; ?>
-                <h6>Citation</h6>
-                <?php echo metadata('item', 'citation', array('no_escape' => true)); ?>
+
+                <?php
+                echo get_specific_plugin_hook_output('Geolocation', 'public_items_show', array('view' => $this, 'item' => $item));
+                ?>
+              <hr>
+              <h6>Item data</h6>
+              <p>Metadata for this item is available in the following formats:
+              <?php echo output_format_list(false, ' | '); ?></p>
+
             </div>
         </div>
-        <?php 
+        <?php
             $url = current_url();
             $pos = strpos($url, 'exhibits');
             if (!$pos): ?>
