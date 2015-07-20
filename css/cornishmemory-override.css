@@ -62,7 +62,8 @@ video {
 					width: 100%;	
 					}
 					
-#item-tags div.element-text {
+										
+					#item-tags div.element-text {
 	color: #ffffff;
 	margin-top: 10px;
 }
@@ -100,3 +101,15 @@ div.correctionspage {
   #show-item-av li audio {
   	width: 100%;
   }
+  
+#av-instructions span.glyphicon.glyphicon-hand-up {
+  	padding-right: 5px;
+  	font-size: 1em;
+  }
+  					
+p#av-instructions {
+	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #848484;
+	margin-top: 5px;
+}
+  
