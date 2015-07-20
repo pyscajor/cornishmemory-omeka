@@ -232,13 +232,14 @@ function sckls_item_image_gallery($attrs = array(), $imageType = 'fullsize', $fi
         // Setup list items with appropriate classes
         if (strstr($mime, 'image') == true) {
             $html .= '<ul id="image-gallery" class="clearfix"><li data-src="' . $file->getWebPath('original') . '" class="' . $class . '">';
-			$html .= $image;
+			$html .= $image.'<p><em>Click or tap the image to enlarge.</em></p>';
         }  elseif (strstr($mime, 'video') == true) {
-           $html .= '<ul style="list-style: none"><li data-src="' . $file->getWebPath('original') . '"><video src="' . $file->getWebPath('original') . '" width="100%" controls>V</video><br><em>Click the play button to watch the video</em>';
+           $html .= '<ul id="show-item-av"><li data-src="' . $file->getWebPath('original') . '"><video src="' . $file->getWebPath('original') . '" width="100%" controls></video>';
 		   $html;
         } 
-	  		elseif (strstr($mime, 'pdf') == true) {
-            $html .= '<li data-iframe="true" data-src="' . $file->getWebPath('original') . '?pdf" class="' . $class . '">';
+	  		elseif (strstr($mime, 'audio') == true) {
+	            $html .= '<ul id="show-item-av"><li data-src="' . $file->getWebPath('original') . '"><img src="/cm-images/audio-placeholder.png" alt="Audio recording" id="audioplaceholder" /><audio src="' . $file->getWebPath('original') . '" width="100%" controls></audio>';
+	 		   $html;
         } else {
             $html .= '<li data-iframe="true" data-src="' . $file->getWebPath('original') . '" class="' . $class . '">';
         }
