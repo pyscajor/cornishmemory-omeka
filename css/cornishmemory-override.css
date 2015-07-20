@@ -1,3 +1,6 @@
+/* @override 
+	http://beta.cornishmemory.com/themes/cornishmemory/css/cornishmemory-override.css */
+
 /* Add cornishmemory.com logo to banner */
 /* div.logo {
 	height: 90px;
@@ -56,6 +59,44 @@ nav.navbar .navbar-nav > li > a .glyphicon-search {
 					}
 
 video {
+					width: 100%;	
 					}
 					
-					
+#item-tags div.element-text {
+	color: #ffffff;
+	margin-top: 10px;
+}
+
+#item-tags div.element-text a {
+	background-color: #000000;
+	padding: 5px 10px;
+	color: #ffffff;
+}
+
+div.correctionspage {
+	background-color: #ffffff;
+	padding-left: 35px;
+	padding-top: 20px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Fix vertical cropping of item show image */
+#image-gallery > li.image-large {
+  width: 100%;
+  max-height: 100% !important;
+  margin-bottom: 20px; }
+  
+  img#audioplaceholder {
+  	width: 100%;
+  }
+  
+  ul#show-item-av {
+  	list-style: none;
+	padding-left: 0;
+  }
+  
+  #show-item-av li audio {
+  	width: 100%;
+  }
