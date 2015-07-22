@@ -32,20 +32,26 @@
                 <table id="search-results" class="table table-hover">
                     <thead>
                         <tr>
-                            <th style="width:25%;"><?php echo __('Type');?></th>
+                            <th style="width:25%;"><?php echo __('Media');?></th>
                             <th style="width:50%;"><?php echo __('Title');?></th>
-                            <th><?php echo __('Results');?></th>
+                            <th><?php echo __('Type');?></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach (loop('search_texts') as $searchText): ?>
                         <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
+						<?php $recordType = $searchText['record_type']; ?>
+						<?php set_current_record($recordType, $record); ?>
                         <tr>
-                            <td style="width:25%;"><?php echo $searchRecordTypes[$searchText['record_type']]; ?></td>
+                            <td style="width:25%;"><?php if ($recordImage = record_image($recordType, 'square_thumbnail', array('class' => 'gallery'))): ?>
+                    <?php echo link_to($record, 'show', $recordImage, array('class' => 'searchimage')); ?>
+				
+				
+                <?php endif; ?></td>
                             <td style="width:50%;">
                                 <a href="<?php echo record_url($record, 'show'); ?>"><?php echo $searchText['title'] ? $searchText['title'] : '[Unknown]'; ?></a>
                             </td>
-                            <td><?php echo $searchText['text']; ?></td>
+                            <td><?php echo $searchRecordTypes[$searchText['record_type']]; ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
