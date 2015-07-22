@@ -1,5 +1,4 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-
 <div class="homepage-about">
     <div class="container">
         <div class="row">
@@ -9,7 +8,6 @@
                     <p style="font-size: 2em"><img src="/cm-images/cm-logo.png" alt="cornishmemory.com logo" style="width: 90px; float: left; margin-right: 20px" />Cornish life as captured on camera and recorded on reel.</p>
 
 <p>Find photos, watch films, and listen to the stories of Cornwall's rich history from Victorian times to the present day. <strong><?php echo total_records('Item'); ?></strong> items and growing.</p>
-<p><form id="search-form" name="search-form" action="/search" method="get"><input type="text" name="query" id="query" value="" class="form-control" placeholder="Search cornishmemory.com - type here then press enter"></form></p>
                 </div>
             </div>
         </div>
@@ -22,7 +20,42 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="row">
+                <!-- Explore -->
+				<div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="content-block less-padding min-height">
+							<a href="/cornwall-map" class="featured">
+								<h6 class="header-label">Explore the map</h6>
+									<div class="overlay"></div>
+									<div style="background-image: url(/cm-images/cm-frontpage-map.jpg);" class="img"></div>
+									<span class="title">Thousands of mapped items</span>
+							</a>
+                        </div>
+                    </div>
+					<div class="col-sm-6 col-md-4">
+                        <div class="content-block less-padding min-height">
+							<div class="featured">
+								<h6 class="header-label">Search</h6>
+									<div class="overlay"></div>
+									<div style="background-image: url(/cm-images/cm-frontpage-map.jpg);" class="img"></div>
+									<span class="maptitle"><form id="search-form" name="search-form" action="/search" method="get"><input type="text" name="query" id="query" value="" class="form-control" placeholder="Type here then press enter"></form></span>
+							</div>
+                        </div>
+                    </div>
+                    <div class="hidden-sm col-md-4">
+                        <div class="content-block less-padding min-height">
+						<a href="/items/browse" class="featured">
+							<h6 class="header-label">Browse</h6>
+								<div class="overlay"></div>
+								<div style="background-image: url(/cm-images/cm-frontpage-map.jpg);" class="img"></div>
+								<span class="title">Browse Everything</span>
+						</a>
+                        </div>
+                    </div>
+                    
+                </div>
+				<!-- End Explore -->
+				<div class="row">
                     <div class="col-sm-6 col-md-4">
                         <div class="content-block less-padding min-height">
                             <?php echo sckls_random_featured_item(); ?>
