@@ -106,10 +106,39 @@ div.correctionspage {
   	padding-right: 5px;
   	font-size: 1em;
   }
-  					
-p#av-instructions {
+  
+  
+  p#av-instructions {
 	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #848484;
 	margin-top: 5px;
 }
-  
+
+ .featured .maptitle {
+   position: absolute;
+   bottom: 56px;
+   text-align: center;
+   width: 100%;
+   z-index: 5;
+   color: white;
+   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+   font-family: "Gentium Basic", serif;
+   font-size: 2.4rem;
+   line-height: 2.7rem;
+   font-weight: 400;
+ }
+ 
+.maptitle #search-form {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: bold;
+}
+
+.maptitle input#query.form-control {
+	text-align: center;
+}
+
+#search-results tbody tr td a.searchimage img.gallery {
+	width: 100px;
+}
