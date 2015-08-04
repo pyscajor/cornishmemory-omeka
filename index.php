@@ -37,7 +37,7 @@
 							<div class="featured">
 								<h6 class="header-label">Search</h6>
 									<div class="overlay"></div>
-									<div style="background-image: url(/cm-images/cm-frontpage-map.jpg);" class="img"></div>
+									<div style="background-image: url(/cm-images/por016_access.jpg);" class="img"></div>
 									<span class="maptitle"><form id="search-form" name="search-form" action="/search" method="get"><input type="text" name="query" id="query" value="" class="form-control" placeholder="Type here then press enter"></form></span>
 							</div>
                         </div>
@@ -47,7 +47,7 @@
 						<a href="/items/browse" class="featured">
 							<h6 class="header-label">Browse</h6>
 								<div class="overlay"></div>
-								<div style="background-image: url(/cm-images/cm-frontpage-map.jpg);" class="img"></div>
+								<div style="background-image: url(/cm-images/por024_access.jpg);" class="img"></div>
 								<span class="title">Browse Everything</span>
 						</a>
                         </div>
