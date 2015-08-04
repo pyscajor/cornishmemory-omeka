@@ -135,10 +135,17 @@ div.correctionspage {
 	font-weight: bold;
 }
 
+
 .maptitle input#query.form-control {
 	text-align: center;
 }
 
 #search-results tbody tr td a.searchimage img.gallery {
 	width: 100px;
+}
+
+/* Citation Styles */
+
+span.citation-url {
+	font: 1em "Open Sans", "Helvetica Neue", sans-serif;
 }
