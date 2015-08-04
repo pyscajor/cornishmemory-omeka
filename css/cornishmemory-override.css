@@ -148,4 +148,13 @@ div.correctionspage {
 
 span.citation-url {
 	font: 1em "Open Sans", "Helvetica Neue", sans-serif;
+	word-wrap: break-word;
 }
+
+/* Grey h6 */
+
+html h6, body h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bdbdbd; }
