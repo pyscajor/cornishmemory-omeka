@@ -2,17 +2,24 @@
 
 <div class="container single-item">
     <div class="content-block">
-        <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?> <small></small></h1>
-        <div class="row">
+        <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
+		<?php // echo files_for_item(array('imageSize' => 'fullsize')); ?>
+        <?php if (metadata('item', 'has files')): ?>
+               <?php echo sckls_item_image_gallery(); ?>
+        <?php else: ?>
+            <p>Sorry, no image available.</p>
+        <?php endif; ?>
+        <div class="row">			
+            <div class="col-sm-7">
+                <?php echo all_element_texts('item', array(false, false)); ?>
+
+                
+     
+
+            </div>
+			
             <div class="col-sm-5">
-                <?php if (metadata('item', 'has files')): ?>
-                    <!-- <ul id="image-gallery" class="clearfix"> -->
-                       <?php echo sckls_item_image_gallery(); ?>
-                       <?php // echo files_for_item(array('imageSize' => 'fullsize')); ?>
-                    <!-- </ul> -->
-                <?php else: ?>
-                    <p>Sorry, no image available.</p>
-                <?php endif; ?>
+                
                 <?php
                 echo get_specific_plugin_hook_output('SocialBookmarking', 'public_items_show', array('view' => $this, 'item' => $item));
                 ?>
@@ -34,20 +41,18 @@
                 <?php
                 echo get_specific_plugin_hook_output('Corrections', 'public_items_show', array('view' => $this, 'item' => $item));
                 ?>
+				<hr>
             </div>
-            <div class="col-sm-7">
-                <?php echo all_element_texts('item', array(false, false)); ?>
-
-                <?php
-                echo get_specific_plugin_hook_output('Geolocation', 'public_items_show', array('view' => $this, 'item' => $item));
-                ?>
-              <hr>
-              <h6>Item data</h6>
-              <p>Metadata for this item is available in the following formats:
-              <?php echo output_format_list(false, ' | '); ?></p>
-
-            </div>
+        
         </div>
+		<?php
+        echo get_specific_plugin_hook_output('Geolocation', 'public_items_show', array('view' => $this, 'item' => $item));
+        ?>
+		<hr>
+        <h6>Item data</h6>
+        <p>Metadata for this item is available in the following formats:
+        <?php echo output_format_list(false, ' | '); ?></p>
+		<hr>
         <?php
             $url = current_url();
             $pos = strpos($url, 'exhibits');
