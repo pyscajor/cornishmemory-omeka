@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="content-block extra-padding">
-					<h5 class="header-label">Dynnargh / Welcome</h6>
                     <p style="font-size: 2em"><img src="/cm-images/cm-logo.png" alt="cornishmemory.com logo" style="width: 90px; float: left; margin-right: 20px" />Cornish life as captured on camera and recorded on reel.</p>
 
 <p>Find photos, watch films, and listen to the stories of Cornwall's rich history from Victorian times to the present day. <strong><?php echo total_records('Item'); ?></strong> items and growing.</p>
+<p><span class="fa fa-map"></span> <a href="/cornwall-map">Explore by Map</a> <span class="fa fa-list"></span> <a href="/items/browse">Browse Everything</a> <span class="fa fa-newspaper-o"></span> <a href="/collections/browse">See the Collections</a> <span class="fa fa-university"></span> <a href="/exhibits">View Exhibits</a> <span class="fa fa-search"></span> <a class="search-overlay-button">Search</a></p>
                 </div>
             </div>
         </div>
