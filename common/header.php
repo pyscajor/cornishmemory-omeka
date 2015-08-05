@@ -38,6 +38,7 @@
     	queue_css_file('lib/bootstrap.min');
         queue_css_file('lib/slick');
         queue_css_file('lib/lightGallery');
+		queue_css_file('font-awesome/css/font-awesome.min');
    		echo head_css(); ?>
 
     <!-- Scripts -->
