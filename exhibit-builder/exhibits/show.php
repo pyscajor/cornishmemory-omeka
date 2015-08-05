@@ -6,7 +6,9 @@ echo head(array(
 
 <div class="container">
     <div class="content-block">
-        <h1><?php echo metadata('exhibit_page', 'title'); ?></h1>
+		<h1><?php echo metadata('exhibit', 'title'); ?></h1>
+		<h2><?php echo metadata('exhibit_page', 'title'); ?></h2>
+		<hr>
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-9">
                 <?php exhibit_builder_render_exhibit_page(); ?>
