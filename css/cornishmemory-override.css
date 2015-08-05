@@ -36,10 +36,10 @@ nav.navbar {
 				    margin-bottom: 0;
 				    border-radius: 0;
 				    border: none;
-				    background: url(/cm-images/cm-logo.png) no-repeat #000000 !important;
-				    min-height: 90px !important; 
-				    background-size: 90px 90px !important;
-				  	padding-top: 25px !important;
+				    background: url(/cm-images/cm-logo.png) no-repeat #2a2929 !important;
+	background-size: 90px 90px !important;
+	min-height: 90px !important;
+	padding-top: 25px !important;
 				  	padding-left: 80px !important;
 				  }
     
@@ -62,8 +62,8 @@ video {
 					width: 100%;	
 					}
 					
-										
-					#item-tags div.element-text {
+
+#item-tags div.element-text {
 	color: #ffffff;
 	margin-top: 10px;
 }
@@ -158,3 +158,37 @@ html h6, body h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: #bdbdbd; }
+  
+  
+  
+  /* Search Overlay Styles */
+  div#search-overlay #query {
+  	background-color: #ffffff !important;
+  	border-style: solid;
+  	margin-bottom: 20px;
+  }
+  
+  #search-overlay div.container span.glyphicon.glyphicon-search {
+  	margin-left: 5px;
+  }
+  
+  /* Homepage icons */
+  #home div.wrapper div.content div.homepage-about div.container div.row div.col-sm-12 div.content-block.extra-padding p span.fa {
+  	margin-left: 15px;
+  	margin-right: 5px;
+  }
+  
+  /* Gradient background */
+  div.content {
+  	background: -webkit-linear-gradient(top, #c4d9d8 0%, #dff1f1 100%) #ffffff;
+  	background: -moz-linear-gradient(top, #c4d9d8 0%, #dff1f1 100%) #ffffff;
+  	background: -ms-linear-gradient(top, #c4d9d8 0%, #dff1f1 100%) #ffffff;
+  	background: linear-gradient(to bottom, #c4d9d8 0%, #dff1f1 100%) #ffffff;
+  }
+  
+  /* Revove header image */
+  header {
+  	background-image: none !important;
+  	background-color: #c4d9d8;
+  }
+  
