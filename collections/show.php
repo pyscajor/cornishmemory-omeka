@@ -12,7 +12,7 @@ if ($collectionTitle == '') {
         <h1><?php echo $collectionTitle; ?></h1>
 		
         <p><?php echo metadata('collection', array('Dublin Core', 'Description')); ?></p>
-		<p><?php echo link_to_items_browse(__('View all items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></p>
+		<p><span class="fa fa-binoculars"></span><?php echo link_to_items_browse(__(' View all items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></p>
 		<h2>Browse first 10 items</h2>
         
         <?php if (metadata('collection', 'total_items') > 0): ?>
