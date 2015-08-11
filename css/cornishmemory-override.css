@@ -1,3 +1,5 @@
+/* @override http://beta.cornishmemory.com/themes/cornishmemory/css/cornishmemory-override.css */
+
 /* @override 
 	http://beta.cornishmemory.com/themes/cornishmemory/css/cornishmemory-override.css */
 
@@ -31,22 +33,48 @@ header .branding h1 a {
 		    @media (max-width: 767px) {
 		      #home header {
 		        height: 100px !important; } }
-					  
+
 nav.navbar {
 				    margin-bottom: 0;
 				    border-radius: 0;
 				    border: none;
-				    background: url(/cm-images/cm-logo.png) no-repeat #2a2929 !important;
+				    background: url(/cm-images/cm-logo.png) no-repeat #ffffff !important;
 	background-size: 90px 90px !important;
 	min-height: 90px !important;
-	padding-top: 25px !important;
+					padding-top: 25px !important;
 				  	padding-left: 80px !important;
-				  }
+	-moz-box-shadow: 0 1px 2px black;
+	box-shadow: 0 1px 2px black;
+}
+
+/* Navbar mobile icons */
+
+button.navbar-toggle {
+	background-color: #88cecc;
+}
+
+a.search-overlay-button.navbar-toggle {
+	background-color: #88cecc;
+}
+
+.navbar-collapse {
+	border-top:  0 !important;
+}
+    
+/* Navbar Current Page */
+nav.navbar .navbar-nav > li.active > a, nav.navbar .navbar-nav > li:hover > a {
+  background: #88cecc;
+  color: #ffffff !important; }
+ 
+ /* Navbar Hover */
+  nav.navbar .navbar-nav > li.active > a:hover, nav.navbar .navbar-nav > li:hover > a:hover {
+    background: #88cecc;
+    color: white; }    
     
 nav.navbar .navbar-nav > li > a {
 				      padding-top: 10px;
 				      padding-bottom: 10px;
-				      color: #c8c8c8 !important;
+				      color: #676767 !important;
 				      font-size: 1.7rem !important;
 				    }
 
@@ -57,11 +85,36 @@ nav.navbar .navbar-nav > li > a .glyphicon-search {
 .correctionsform {
 						margin-top: 20px;
 					}
-
+/* Media Styles */
 video {
-					width: 100%;	
-					}
-					
+	width: 75%;
+	margin-bottom: 2%;
+}
+
+@media (max-width: 767px) {
+	video {
+		margin-bottom: 2% ;
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px ) {
+	video {
+		margin-bottom: 2% ;
+		width: 100%;
+	}
+}
+
+img#audioplaceholder {
+	width: 100%;
+}
+
+audio {
+	width: 100%;
+	margin-bottom: 2%;
+}				
+
+/* Tags */
 
 #item-tags div.element-text {
 	color: #ffffff;
@@ -72,7 +125,10 @@ video {
 	background-color: #000000;
 	padding: 5px 10px;
 	color: #ffffff;
+	margin-bottom: 10px;
 }
+
+/* Corrections and Amendments Page */
 
 div.correctionspage {
 	background-color: #ffffff;
@@ -89,9 +145,7 @@ div.correctionspage {
   max-height: 100% !important;
   margin-bottom: 20px; }
   
-  img#audioplaceholder {
-  	width: 100%;
-  }
+ 
   
   ul#show-item-av {
   	list-style: none;
@@ -180,15 +234,19 @@ html h6, body h6 {
   
   /* Gradient background */
   div.content {
-  	background: -webkit-linear-gradient(top, #c4d9d8 0%, #dff1f1 100%) #ffffff;
-  	background: -moz-linear-gradient(top, #c4d9d8 0%, #dff1f1 100%) #ffffff;
-  	background: -ms-linear-gradient(top, #c4d9d8 0%, #dff1f1 100%) #ffffff;
-  	background: linear-gradient(to bottom, #c4d9d8 0%, #dff1f1 100%) #ffffff;
+  	background: -webkit-linear-gradient(top, #f3f3f3 0%, #dff1f1 100%) #ffffff;
+  	background: -moz-linear-gradient(top, #f3f3f3 0%, #dff1f1 100%) #ffffff;
+  	background: -ms-linear-gradient(top, #f3f3f3 0%, #dff1f1 100%) #ffffff;
+  	background: linear-gradient(to bottom, #f3f3f3 0%, #dff1f1 100%) #ffffff;
   }
   
   /* Revove header image */
   header {
   	background-image: none !important;
-  	background-color: #c4d9d8;
+  	background-color: #f3f3f3;
   }
   
+  /* Search link on main menu */
+  .navbar-right {
+  	margin-right: 5% !important;
+  }
