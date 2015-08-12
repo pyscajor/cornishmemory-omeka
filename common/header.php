@@ -82,7 +82,7 @@
             <div class="collapse navbar-collapse" id="navbar-collapse-button">
                 <?php $nav = public_nav_main(); echo $nav->setUlClass('nav navbar-nav'); ?>
                 <ul class="nav navbar-nav navbar-right hidden-xs">
-                    <li><a class="search-overlay-button"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                    <li><a class="search-overlay-button"><span class="glyphicon glyphicon-search"></span> Search Archive</a></li>
                 </ul>
             </div>
         </div>
