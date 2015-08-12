@@ -4,11 +4,17 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="content-block extra-padding">
-                    <p style="font-size: 2em"><img src="/cm-images/cm-logo.png" alt="cornishmemory.com logo" style="width: 90px; float: left; margin-right: 20px" />Cornish life as captured on camera and recorded on reel.</p>
+                    <div class="welcomebox">
+						<p style="font-size: 3em"><!-- <img src="/cm-images/cm-logo.png" alt="cornishmemory.com logo" style="width: 90px; float: left; margin-right: 20px" /> -->Cornish life as captured on camera and recorded on reel.</p> 
 
-<p>Find photos, watch films, and listen to the stories of Cornwall's rich history from Victorian times to the present day. <strong><?php echo total_records('Item'); ?></strong> items and growing.</p>
-<p><span class="fa fa-map"></span> <a href="/cornwall-map">Explore by Map</a> <span class="fa fa-list"></span> <a href="/items/browse">Browse Everything</a> <span class="fa fa-newspaper-o"></span> <a href="/collections/browse">See the Collections</a> <span class="fa fa-university"></span> <a href="/exhibits">View Exhibits</a> <span class="fa fa-search"></span> <a class="search-overlay-button">Search</a></p>
-                </div>
+						<p>Find photos, watch films, and listen to the stories of Cornwall's rich history from Victorian times to the present day.</p>
+						<p class="homepageitemtotal"><strong><?php echo total_records('Item'); ?></strong> items and growing.</p>
+						<h6>Supporters & Sponsors</h6>
+						<p><img src="/cm-images/hlf-logo-frontpage.png" alt="Heritage Lottery Funded" /><img src="/cm-images/king-herry-ferry-frontpage.png" alt="King Harry Ferry" /> <img src="/cm-images/st-austell-brewery-frontpage.png" alt="St Austell Brewery" /> <img src="/cm-images/cht-logo-frontpage.png" alt="Cornwall Heritage Trust" /> </p>
+<!-- ><p class="welcomeboxicons"><span class="fa fa-map"></span> <a href="/cornwall-map">Explore by Map</a><span class="fa fa-search"></span> <a class="search-overlay-button">Search the Archive</a> <span class="fa fa-list"></span> <a href="/items/browse">Browse Everything</a> <span class="fa fa-newspaper-o"></span> <a href="/collections/browse">See the Collections</a> <span class="fa fa-university"></span> <a href="/exhibits">View Exhibits</a> </p> -->
+                
+					</div>
+				</div>
             </div>
         </div>
     </div>
@@ -35,7 +41,7 @@
 					<div class="col-sm-6 col-md-4">
                         <div class="content-block less-padding min-height">
 							<div class="featured">
-								<h6 class="header-label">Search</h6>
+								<h6 class="header-label">Search the Archive</h6>
 									<div class="overlay"></div>
 									<div style="background-image: url(/cm-images/por016_access.jpg);" class="img"></div>
 									<span class="maptitle"><form id="search-form" name="search-form" action="/search" method="get"><input type="text" name="query" id="query" value="" class="form-control" placeholder="Type here then press enter"></form></span>
@@ -87,7 +93,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="content-block">
-                    <h5 class="header-label">Recently Added Items</h6>
+                    <h5 class="header-label">What's New</h6>
 					
 					<?php 
 					                        $homepageRecentItems = '6';
