@@ -1,7 +1,8 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show')); ?>
 
 <div class="container single-item">
-    <div class="content-block">
+	<div class="itemshow">
+    	<div class="content-block">
         <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 		<?php // echo files_for_item(array('imageSize' => 'fullsize')); ?>
         <?php if (metadata('item', 'has files')): ?>
@@ -64,7 +65,9 @@
             </ul>
         </nav>
         <?php else: echo '<br/>'; endif; ?>
-    </div>
+    
+		</div>
+	</div>
 </div>
 
 <?php echo foot(); ?>
