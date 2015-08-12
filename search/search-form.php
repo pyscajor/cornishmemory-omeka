@@ -1,6 +1,6 @@
 <?php echo $this->form('search-form', $options['form_attributes']); ?>
-    <?php echo $this->formText('query', $filters['query'], array('class'=>'form-control', 'placeholder'=>'Search here')); ?>
-	<p>Click and type above to search. Specific search criteria? Visit our <a href="/items/search">Advanced Search</a> page.</p>
+    <?php echo $this->formText('query', $filters['query'], array('class'=>'form-control', 'placeholder'=>'Search the archive')); ?>
+	<p>Click and type above to search the archive. Specific search criteria? Visit our <a href="/items/search">Advanced Search</a> page.</p>
     <?php if ($options['show_advanced']): ?>
         <fieldset id="advanced-form">
             <fieldset id="query-types">
