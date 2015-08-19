@@ -10,17 +10,17 @@
         <?php else: ?>
             <p>Sorry, no image available.</p>
         <?php endif; ?>
-        <div class="row">			
+        <div class="row">
             <div class="col-sm-7">
                 <?php echo all_element_texts('item', array(false, false)); ?>
 
-                
-     
+
+
 
             </div>
-			
+
             <div class="col-sm-5">
-                
+
                 <?php
                 echo get_specific_plugin_hook_output('SocialBookmarking', 'public_items_show', array('view' => $this, 'item' => $item));
                 ?>
@@ -30,7 +30,7 @@
                 <!-- The following prints a list of all tags associated with the item -->
                 <?php if (metadata('item', 'has tags')): ?>
                 <div id="item-tags" class="element">
-                    <h6><?php echo __('Tags'); ?></h6>
+                    <h6><span class="fa fa-tags"></span> <?php echo __('Tags'); ?></h6>
                     <div class="element-text"><?php echo tag_string('item'); ?></div>
                 </div>
                 <?php endif;?>
@@ -44,7 +44,7 @@
                 ?>
 				<hr>
             </div>
-        
+
         </div>
 		<?php
         echo get_specific_plugin_hook_output('Geolocation', 'public_items_show', array('view' => $this, 'item' => $item));
@@ -65,7 +65,7 @@
             </ul>
         </nav>
         <?php else: echo '<br/>'; endif; ?>
-    
+
 		</div>
 	</div>
 </div>
