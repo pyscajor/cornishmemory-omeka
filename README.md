@@ -22,3 +22,5 @@ SCKLS Customization Features:
   *  Toggle "featured" content on the homepage
   *  Footer logos (up to 3)
   *  Custom Google search
+
+More to come.
