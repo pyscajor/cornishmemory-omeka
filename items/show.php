@@ -25,9 +25,11 @@
                 echo get_specific_plugin_hook_output('SocialBookmarking', 'public_items_show', array('view' => $this, 'item' => $item));
                 ?>
                 <hr>
-                <h6>Collection</h6>
-                <p><?php echo link_to_collection_for_item(); ?></p>
-                <!-- The following prints a list of all tags associated with the item -->
+                	<br>
+									<h6><span class="fa fa-book"></span> Collection</h6>
+                		<p><?php echo link_to_collection_for_item(); ?></p>
+                		<br>
+								<!-- The following prints a list of all tags associated with the item -->
                 <?php if (metadata('item', 'has tags')): ?>
                 <div id="item-tags" class="element">
                     <h6><span class="fa fa-tags"></span> <?php echo __('Tags'); ?></h6>
@@ -36,7 +38,8 @@
                 <?php endif;?>
                 <!-- End Tags -->
                 <br>
-                <h6>Citation</h6>
+								<br>
+                <h6><span class="fa fa-pencil"></span> Citation</h6>
                 <?php echo metadata('item', 'citation', array('no_escape' => true)); ?>
                 <hr>
                 <?php
