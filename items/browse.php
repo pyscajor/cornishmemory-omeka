@@ -27,10 +27,10 @@
                             <?php echo browse_sort_links(array('Collection'=>'Collection Name'), array('')); ?>
                         </div>
                         <div class="hidden-sm col-md-2">
-                            Place
+                            <?php echo browse_sort_links(array('Place'=>'Dublin Core,Coverage'), array('')); ?>
                         </div>
                         <div class="col-sm-4 col-md-4">
-                            Date
+                            <?php echo browse_sort_links(array('Date'=>'Dublin Core,Date'), array('')); ?>
                         </div>
                     </div>
                 </div>
