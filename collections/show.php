@@ -43,12 +43,16 @@ if ($collectionTitle == '') {
                 <div class="row">
                     <div class="col-sm-2 col-md-2">
                         <?php $image = $item->Files; ?>
-                        <?php if ($image) {
+                        <?php if ($image): ?> 
+							<?php
+							if (metadata('item', 'has thumbnail')):
+	
                                 echo link_to_item('<div style="background-image: url(' . file_display_url($image[0], 'fullsize') . ');" class="img"></div>');
-                            } else {
-                                echo link_to_item('<div style="background-image: url(' . img('defaultImage@2x.jpg') . ');" class="img"></div>');
-                            }
+                             else: 
+                                echo link_to_item('<div style="background-image: url(' . img('fallback-video.png') . ');" class="img"></div>');
+                        endif;    
                         ?>
+						<?php endif; ?>
                     </div>
                     <div class="col-sm-3 col-md-2">
                         <?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?>
