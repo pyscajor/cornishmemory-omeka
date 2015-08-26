@@ -4,15 +4,21 @@
 	<div class="itemshow">
     	<div class="content-block">
         <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
-		<?php // echo files_for_item(array('imageSize' => 'fullsize')); ?>
         <?php if (metadata('item', 'has files')): ?>
                <?php echo sckls_item_image_gallery(); ?>
         <?php else: ?>
             <p>Sorry, no image available.</p>
         <?php endif; ?>
+        <nav>
+            <ul class="pager">
+                <li id="previous-item" class="previous"><?php echo link_to_previous_item_show('&larr; Previous'); ?></li>
+                <li id="next-item" class="next"><?php echo link_to_next_item_show('Next &rarr;'); ?></li>
+            </ul>
+        </nav>
         <div class="row">
             <div class="col-sm-7">
-                <?php echo all_element_texts('item', array(false, false)); ?>
+                <h2>About this item</h2>
+				<?php echo all_element_texts('item', array(false, false)); ?>
 
 
 
@@ -20,7 +26,6 @@
             </div>
 
             <div class="col-sm-5">
-
                 <?php
                 echo get_specific_plugin_hook_output('SocialBookmarking', 'public_items_show', array('view' => $this, 'item' => $item));
                 ?>
