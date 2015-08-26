@@ -163,12 +163,13 @@ audio {
 }
 
 #item-tags div.element-text a {
-	background-color: #000000;
+	background-color: #bcbdbc;
 	padding: 5px;
 	color: #ffffff;
 	margin-bottom: 5px;
 	float: none;
 	display: inline-block;
+	border-radius: 5px;
 }
 
 /* Corrections and Amendments Page */
@@ -186,7 +187,7 @@ div.correctionspage {
 #image-gallery > li.image-large {
   width: 100%;
   max-height: 100% !important;
-  margin-bottom: 20px; }
+  margin-bottom: 15px; }
   
  
   
@@ -454,3 +455,9 @@ div.content-block.less-padding.min-height .header-label {
      transition: all 0s !important;
      cursor: pointer; }
  
+ /* Item Navigation - previous/next buttons */
+ 
+ div.itemshow ul.pager {
+ 	width: 94%;
+ 	margin-right: auto;
+ }
