@@ -232,7 +232,7 @@ function sckls_item_image_gallery($attrs = array(), $imageType = 'fullsize', $fi
         // Setup list items with appropriate classes
         if (strstr($mime, 'image') == true) {
             $html .= '<ul id="image-gallery" class="clearfix"><li data-src="' . $file->getWebPath('original') . '" class="' . $class . '">';
-			$html .= $image.'<p id="av-instructions"><span class="glyphicon glyphicon-hand-up"></span> Click or tap the photo to fit to screen.</p>';
+			$html .= $image.'';
         }  elseif (strstr($mime, 'video') == true) {
            $html .= '<ul id="show-item-av"><li data-src="' . $file->getWebPath('original') . '"><video src="' . $file->getWebPath('original') . '" width="100%" controls></video>';
 		   $html;
