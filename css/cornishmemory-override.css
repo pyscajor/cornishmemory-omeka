@@ -289,13 +289,12 @@ html h6, body h6 {
 	
 	#search-overlay .glyphicon-search {
       background: none;
-      font-size: 2.7rem;
+      font-size: 2.8rem;
       color: #a7a69b;
       border: none;
       position: absolute;
-      top: 145px;
-    	margin-left: 10px !important;
-    }
+      margin-left: 10px !important;
+	}
   
   
   /* Homepage icons */
