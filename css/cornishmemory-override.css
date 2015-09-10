@@ -189,7 +189,9 @@ div.correctionspage {
   max-height: 100% !important;
   margin-bottom: 15px; }
   
- 
+  #image-gallery li.image-large img {
+  	max-height: 700px;
+  }
   
   ul#show-item-av {
   	list-style: none;
@@ -460,3 +462,25 @@ div.content-block.less-padding.min-height .header-label {
  	width: 94%;
  	margin-right: auto;
  }
+ 
+ /* Footer */
+footer {
+  padding: 25px 0; }
+
+footer p {
+  color: #a7a69b;
+  margin: 6px 0 0;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem; }
+
+footer p > a {
+	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 1.4rem;
+    color: #a7a69b;
+    font-weight: 600; }
+
+footer .partners img {
+	margin-bottom: 10px;
+	margin-right: 5px; }
