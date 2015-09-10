@@ -3,32 +3,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3><?php echo link_to_home_page(); ?></h3>
-                    <p>Azook CIC<br>Copyright &copy; <?php echo date('Y'); ?> <?php echo option('site_title'); ?> and collection owners.</p>
+                    <h3>Who are we?</h3>
+                    <p><img src="/cm-images/cm-logo.png" alt="cornishmemory.com logo" style="width: 60px; float: left; margin-right: 10px;" /> Cornishmemory.com is a core product of Azook Community Interest Company, a not-for-profit, social enterprise dedicated to growing cultural confidence amongst Cornish communities by connecting people with their cultural heritage. Find out more about <a href="http://azook.org.uk/">Azook CIC</a>.</p>
+                      <p>Copyright &copy; Azook CIC, <?php echo date('Y'); ?> <?php echo option('site_title'); ?> and collection owners.</p>
                     <p>Please read our <a href="/terms" title="Terms and Conditions of Use">Terms and Conditions of Use</a></p>
                 </div>
                 <div class="col-sm-6">
                     <div class="row partners">
-                        <?php
-                            $logos = array(
-                                array( get_theme_option('Theme: Footer1'), get_theme_option('Theme: Footer1link')),
-                                array( get_theme_option('Theme: Footer2'), get_theme_option('Theme: Footer2link')),
-                                array( get_theme_option('Theme: Footer3'), get_theme_option('Theme: Footer3link'))
-                            );
-                            foreach ($logos as $logo) {
-                                if (!empty($logo[0])){
-                                    echo '<div class="col-xs-4 col-sm-6 col-md-4">';
-                                    if (!empty($logo[1])){
-                                        echo '<a href="' . $logo[1] . '" target="_blank">';
-                                    }
-                                    echo '        <img src="' . public_url('') . 'files/theme_uploads/' . $logo[0] . '" />';
-                                    if (!empty($logo[1])){
-                                        echo '</a>';
-                                    }
-                                    echo '</div>';
-                                }
-                            }
-                        ?>
+                        <h3>Funders</h3>
+                        <img src="/cm-images/funders/hlf-logo.png" alt="Heritage Lottery Funded" />
+                        <img src="/cm-images/funders/erdf-logo.jpg" alt="European Regional Development Fund" />
+                        <img src="/cm-images/funders/ccf-logo.png" alt="Cornwall Community Fund" />
+                        <img src="/cm-images/funders/cht-logo.png" alt="Cornwall Heritage Trust" />
+                        <img src="/cm-images/funders/eff-logo.jpg" alt="European Fisheries Fund" />
+                        <img src="/cm-images/funders/feast-logo.jpg" alt="FEAST" />
+                        <img src="/cm-images/funders/visit-cornwall-logo.png" alt="Visit Cornwall" />
                     </div>
                 </div>
             </div>
