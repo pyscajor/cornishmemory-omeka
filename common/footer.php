@@ -13,13 +13,13 @@
                 <div class="col-sm-6">
                     <div class="row partners">
                         <h3>Funders</h3>
-                        <img src="/cm-images/funders/hlf-logo.png" alt="Heritage Lottery Funded" />
-                        <img src="/cm-images/funders/erdf-logo.jpg" alt="European Regional Development Fund" />
-                        <img src="/cm-images/funders/ccf-logo.png" alt="Cornwall Community Fund" />
-                        <img src="/cm-images/funders/cht-logo.png" alt="Cornwall Heritage Trust" />
-                        <img src="/cm-images/funders/eff-logo.jpg" alt="European Fisheries Fund" />
-                        <img src="/cm-images/funders/feast-logo.jpg" alt="FEAST" />
-                        <img src="/cm-images/funders/visit-cornwall-logo.png" alt="Visit Cornwall" />
+                        <a href="http://www.hlf.org.uk" title="Heritage Lottery Fund"><img src="/cm-images/funders/hlf-logo.png" alt="Heritage Lottery Funded" /></a>
+                        <a href="http://ec.europa.eu/regional_policy/en/funding/erdf/" title="European Regional Development Fund"><img src="/cm-images/funders/erdf-logo.jpg" alt="European Regional Development Fund" /></a>
+                        <a href="http://www.cornwallfoundation.com" title="Cornwall Community Foundation"><img src="/cm-images/funders/ccf-logo.png" alt="Cornwall Community Foundation" /></a>
+                        <a href="http://www.cornwallheritagetrust.org" title="Cornwall Heritage Trust"><img src="/cm-images/funders/cht-logo.png" alt="Cornwall Heritage Trust" /></a>
+                        <a href="http://ec.europa.eu/fisheries/cfp/eff/index_en.htm" title="European Fisheries Fund"><img src="/cm-images/funders/eff-logo.jpg" alt="European Fisheries Fund" /></a>
+                        <a href="http://feastcornwall.org" title="FEAST"><img src="/cm-images/funders/feast-logo.jpg" alt="FEAST" /></a>
+                        <a href="https://www.visitcornwall.com" title="Visit Cornwall"><img src="/cm-images/funders/visit-cornwall-logo.png" alt="Visit Cornwall" /></a>
                     </div>
                 </div>
             </div>
