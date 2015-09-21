@@ -5,7 +5,7 @@
                 <div class="col-sm-6">
                     <h3>Who are we?</h3>
                     <p>cornishmemory.com is part of the Azook family. </p>
-                    <p><a href="http://www.azook.org.uk"><img src="/cm-images/azook-logo-137px.png" alt="Azook logo" style="float:left; margin-right: 10px; margin-bottom: 20px"/></a>Azook Community Interest Company is a not-for-profit social enterprise dedicated to growing cultural confidence amongst Cornish communities by connecting people with their cultural heritage. </p>
+                    <p><a href="http://www.azook.org.uk"><img src="/cm-images/azook-logo-137px.png" alt="Azook logo" style="float:left; margin: 15px 10px 30px 0px;"/></a>Azook Community Interest Company is a not-for-profit social enterprise dedicated to growing cultural confidence amongst Cornish communities by connecting people with their cultural heritage. </p>
                       <p>Find out more about <a href="http://azook.org.uk/">Azook CIC</a>.</p>
                       <p>Copyright &copy; Azook CIC, <?php echo date('Y'); ?> <?php echo option('site_title'); ?> and collection owners.</p>
                     <p>Please read our <a href="/terms" title="Terms and Conditions of Use">Terms and Conditions of Use</a></p>
