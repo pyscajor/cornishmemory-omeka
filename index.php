@@ -26,10 +26,10 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="content-block less-padding min-height">
 							<a href="/cornwall-map" class="featured">
-								<h6 class="header-label">Explore the map</h6>
+								<h6 class="header-label">Thousands of mapped items</h6>
 									<div class="overlay"></div>
 									<div style="background-image: url(/cm-images/cm-frontpage-map.jpg);" class="img"></div>
-									<span class="title">Thousands of mapped items</span>
+									<span class="title">Explore the map</span>
 							</a>
                         </div>
                     </div>
@@ -46,10 +46,10 @@
                     <div class="hidden-sm col-md-4">
                         <div class="content-block less-padding min-height">
 						<a href="/items/browse" class="featured">
-							<h6 class="header-label">Browse</h6>
+							<h6 class="header-label">Browse Everything</h6>
 								<div class="overlay"></div>
 								<div style="background-image: url(/cm-images/por024_access.jpg);" class="img"></div>
-								<span class="title">Browse Everything</span>
+								<span class="title">Browse</span>
 						</a>
                         </div>
                     </div>
