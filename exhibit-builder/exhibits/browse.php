@@ -15,7 +15,8 @@
                     <?php echo exhibit_builder_link_to_exhibit($exhibit, $exhibitImage, array('class' => 'exhibit-browse-image')); ?>
                 <?php endif; ?>
                 <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true))): ?>
-                <div class="description"><?php echo $exhibitDescription; ?></div>
+                <div class="description"><?php echo $exhibitDescription; ?>
+                <p>View the <?php echo link_to_exhibit(); ?> exhibition.</div>
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>
