@@ -34,7 +34,8 @@
                         <tr>
                             <th style="width:25%;"><?php echo __('Media');?></th>
                             <th style="width:50%;"><?php echo __('Title');?></th>
-                            <th><?php echo __('Type');?></th>
+                            <th><?php echo __('Place');?></th>
+                            <th><?php echo __('Date');?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,13 +46,14 @@
                         <tr>
                             <td style="width:25%;"><?php if ($recordImage = record_image($recordType, 'square_thumbnail', array('class' => 'gallery'))): ?>
                     <?php echo link_to($record, 'show', $recordImage, array('class' => 'searchimage')); ?>
-				
-				
+
+
                 <?php endif; ?></td>
                             <td style="width:50%;">
                                 <a href="<?php echo record_url($record, 'show'); ?>"><?php echo $searchText['title'] ? $searchText['title'] : '[Unknown]'; ?></a>
                             </td>
-                            <td><?php echo $searchRecordTypes[$searchText['record_type']]; ?></td>
+                            <td><?php echo metadata('item', array('Dublin Core', 'Coverage')); ?></td>
+                            <td><?php echo metadata('item', array('Dublin Core', 'Date'), array('snippet'=>150)); ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
