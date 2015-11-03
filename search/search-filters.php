@@ -1,1 +1,1 @@
-<small><?php echo $query; ?></small>
+for <?php echo '"' . $query . '"'; ?>

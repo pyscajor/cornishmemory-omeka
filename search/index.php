@@ -27,7 +27,7 @@
 <?php else: ?>
     <div class="container">
         <div class="content-block">
-            <h1><?php echo __('Search Results'); ?> <?php echo search_filters(); ?></h1>
+            <h1><?php echo __('Search Results'); ?> <?php echo search_filters(); ?> <small><?php echo __('(%s total)', $total_results); ?></small></h1>
             <?php if ($total_results): ?>
                 <table id="search-results" class="table table-hover">
                     <thead>
