@@ -9,12 +9,13 @@ if ($collectionTitle == '') {
 
 <div class="container">
     <div class="content-block">
-        <h1><?php echo $collectionTitle; ?></h1>
-		
+        <h1><?php echo $collectionTitle; ?> <small>(<?php echo metadata('collection', 'total_items'); ?> Items)</small></h1>
         <p><?php echo metadata('collection', array('Dublin Core', 'Description')); ?></p>
-		<p><span class="fa fa-binoculars"></span><?php echo link_to_items_browse(__(' View all items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></p>
+<hr>
+    <p><strong><span class="fa fa-binoculars"></span> View all <?php echo metadata('collection', 'total_items'); ?> items in <?php echo link_to_items_browse(__('the %s', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></strong></p>
+<hr>
 		<h2>Browse first 10 items</h2>
-        
+
         <?php if (metadata('collection', 'total_items') > 0): ?>
         <div class="browse-items">
             <?php
@@ -37,20 +38,20 @@ if ($collectionTitle == '') {
                     </div>
                 </div>
             </div>
-        
+
             <?php foreach (loop('items') as $item): ?>
             <div class="item">
                 <div class="row">
                     <div class="col-sm-2 col-md-2">
                         <?php $image = $item->Files; ?>
-                        <?php if ($image): ?> 
+                        <?php if ($image): ?>
 							<?php
 							if (metadata('item', 'has thumbnail')):
-	
+
                                 echo link_to_item('<div style="background-image: url(' . file_display_url($image[0], 'fullsize') . ');" class="img"></div>');
-                             else: 
+                             else:
                                 echo link_to_item('<div style="background-image: url(' . img('fallback-video.png') . ');" class="img"></div>');
-                        endif;    
+                        endif;
                         ?>
 						<?php endif; ?>
                     </div>
@@ -66,9 +67,9 @@ if ($collectionTitle == '') {
                     <div class="col-sm-4 col-md-4">
                         <?php echo metadata('item', array('Dublin Core', 'Date'), array('snippet'=>150)); ?>
                     </div>
-                
+
                     <?php // fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-					
+
                 </div>
             </div>
             <?php endforeach; ?>
