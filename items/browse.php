@@ -5,13 +5,17 @@
 
 <div class="container">
     <div class="content-block">
-	       
-	            
-				
-        <h1><?php echo 'Browse items'; ?></h1>
-		
-<p>You may wish to use a <a class="search-overlay-button"><span class="glyphicon glyphicon-search"></span> Search</a> or visit our <a href="/cornwall-map">map</a> and explore our <a href="/collections/browse">collections</a> and <a href="/exhibits">exhibitions</a>.</p>
+
+
+
+        <h1><?php if(is_current_url('/items/browse?search')): ?>
+          <?php echo "Search results"; ?>
+        <?php else : ?>
+           <?php echo 'Browse items'; ?>
+        <?php endif; ?> <small><?php echo __('(%s total)', $total_results); ?></small></h1>
+        <p class="browse-search-filters"><?php echo item_search_filters(); ?></p>
 <p></p>
+
         <div class="browse-items">
             <?php if ($total_results > 0): ?>
             <?php
@@ -40,14 +44,14 @@
                     <div class="row">
                         <div class="col-sm-2 col-md-2">
                             <?php $image = $item->Files; ?>
-                            <?php if ($image): ?> 
+                            <?php if ($image): ?>
 								<?php
 								if (metadata('item', 'has thumbnail')):
-		
+
                                     echo link_to_item('<div style="background-image: url(' . file_display_url($image[0], 'fullsize') . ');" class="img"></div>');
-                                 else: 
+                                 else:
                                     echo link_to_item('<div style="background-image: url(' . img('fallback-video.png') . ');" class="img"></div>');
-                            endif;    
+                            endif;
                             ?>
 							<?php endif; ?>
                         </div>
@@ -73,6 +77,8 @@
             <?php endif; ?>
         </div>
         <?php echo pagination_links(); ?>
+        <h2>Data links</h2>
+        <?php echo output_format_list(false); ?>
         <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
     </div>
 </div>
