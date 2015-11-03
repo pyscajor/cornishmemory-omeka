@@ -1,7 +1,7 @@
 /* @override http://beta.cornishmemory.com/themes/cornishmemory/css/cornishmemory-override.css
 	http://cornishmemory.com/themes/cornishmemory/css/cornishmemory-override.css */
 
-/* @override 
+/* @override
 	http://beta.cornishmemory.com/themes/cornishmemory/css/cornishmemory-override.css */
 
 /* Add cornishmemory.com logo to banner */
@@ -28,7 +28,7 @@ header .branding h1 a {
         font-size: 4rem;
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.80);
         transition: 0.5s all; }
-		
+
 #home header {
 		    height: 100px !important; }
 		    @media (max-width: 767px) {
@@ -61,17 +61,17 @@ a.search-overlay-button.navbar-toggle {
 .navbar-collapse {
 	border-top:  0 !important;
 }
-    
+
 /* Navbar Current Page */
 nav.navbar .navbar-nav > li.active > a, nav.navbar .navbar-nav > li:hover > a {
   background: #88cecc;
   color: #ffffff !important; }
- 
+
  /* Navbar Hover */
   nav.navbar .navbar-nav > li.active > a:hover, nav.navbar .navbar-nav > li:hover > a:hover {
     background: #88cecc;
-    color: white; }    
-    
+    color: white; }
+
 nav.navbar .navbar-nav > li > a {
 				      padding-top: 10px;
 				      padding-bottom: 10px;
@@ -82,11 +82,11 @@ nav.navbar .navbar-nav > li > a {
 nav.navbar .navbar-nav > li > a .glyphicon-search {
 				        font-size: 1.7rem !important;
 				        margin-right: 5px; }
-				  
+
 .correctionsform {
 						margin-top: 20px;
 					}
-/* Homepage */					
+/* Homepage */
 
 .welcomebox {
 	background-color: #ffffff;
@@ -122,11 +122,11 @@ nav.navbar .navbar-nav > li > a .glyphicon-search {
   position: relative;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.0);
   margin-bottom: 25px; }
-  
+
 /*  div.itemshow {
   	background-color: #ffffff;
-  }		
-  				 */	
+  }
+  				 */
 /* Media Styles */
 video {
 	width: 75%;
@@ -154,7 +154,7 @@ img#audioplaceholder {
 audio {
 	width: 100%;
 	margin-bottom: 2%;
-}				
+}
 
 /* Tags */
 
@@ -189,26 +189,26 @@ div.correctionspage {
   width: 100%;
   max-height: 100% !important;
   margin-bottom: 15px; }
-  
+
   #image-gallery li.image-large img {
   	max-height: 700px;
   }
-  
+
   ul#show-item-av {
   	list-style: none;
 	padding-left: 0;
   }
-  
+
   #show-item-av li audio {
   	width: 100%;
   }
-  
+
 #av-instructions span.glyphicon.glyphicon-hand-up {
   	padding-right: 5px;
   	font-size: 1em;
   }
-  
-  
+
+
   p#av-instructions {
 	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #848484;
@@ -231,7 +231,7 @@ div.correctionspage {
    opacity: 1;
    padding-top: 15px;
  }
- 
+
 .maptitle #search-form {
 	width: 80%;
 	margin-right: auto;
@@ -262,9 +262,9 @@ html h6, body h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: #bdbdbd; }
-  
-  
-  
+
+
+
   /* Search Overlay Styles */
   div#search-overlay #query {
   	background-color: #ffffff !important;
@@ -272,24 +272,31 @@ html h6, body h6 {
   	margin-bottom: 20px;
   }
   
+  input#search.form-control {
+  	background-color: #f9f9f9;
+  	margin-bottom: 00px;
+  	border: 1px solid #5a5a5a;
+  }
+
   #search-overlay div.container span.glyphicon.glyphicon-search {
   	margin-left: 5px;
   }
-  
+
   #search-overlay {
-    background: rgba(226, 226, 226, 0.9);
+    background: rgba(236, 236, 236, 0.96);
   	position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     z-index: 999;
     padding-top: 40px; }
-	
+
 	#search-omeka-container p {
 		font-weight: bold;
 		font-size: 1.5em;
+		margin-top: 15px;
 	}
-	
+
 	#search-overlay .glyphicon-search {
       background: none;
       font-size: 2.8rem;
@@ -298,14 +305,14 @@ html h6, body h6 {
       position: absolute;
       margin-left: 10px !important;
 	}
-  
-  
+
+
   /* Homepage icons */
   #home div.wrapper div.content div.homepage-about div.container div.row div.col-sm-12 div.content-block.extra-padding p span.fa {
   	margin-left: 15px;
   	margin-right: 5px;
   }
-  
+
   /* Gradient background */
   div.content {
   	background: -webkit-linear-gradient(top, #f1f1f1 0%, #cfcfcf 100%) #ffffff;
@@ -313,23 +320,23 @@ html h6, body h6 {
   	background: -ms-linear-gradient(top, #f1f1f1 0%, #cfcfcf 100%) #ffffff;
   	background: linear-gradient(to bottom, #f1f1f1 0%, #cfcfcf 100%) #ffffff;
   }
- 
-    
+
+
     /* Revove header image */
   header {
   	background-image: none !important;
   	background-color: #f1f1f1;
   }
-  
+
   /* Search link on main menu */
   .navbar-right {
   	margin-right: 5% !important;
   }
-  
+
   /* Homepage Image Boxes */
   .featured:hover .overlay {
     opacity: 0.5; }
-    
+
     .featured .overlay {
       position: absolute;
       top: 0;
@@ -352,7 +359,7 @@ html h6, body h6 {
   background-position: center center;
   background-repeat: no-repeat;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.0) inset; }
-  
+
   .featured .img:before {
     content: '';
     border: 0px solid white;
@@ -361,16 +368,16 @@ html h6, body h6 {
     bottom: 6px;
     left: 6px;
     right: 6px; }
-  
 
-/* Featured box sub-title */	
+
+/* Featured box sub-title */
 div.content-block.less-padding.min-height .header-label {
 		background-color: rgba(0, 0, 0, 0.5);
 		opacity: 1;
 		padding-top: 5px;
 		padding-bottom: 6px;
 	}
-	
+
 /* h6 in featured boxes */
 .featured .title {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -378,15 +385,15 @@ div.content-block.less-padding.min-height .header-label {
 		padding-top: 5px;
 }
 
-  
+
   #home div.wrapper div.content div.homepage-about div.container div.row div.col-sm-12 div.content-block.extra-padding p a {
   	font-size: 0.8em;
   }
-  
+
   h5.header-label {
   	color: #3a3a3a !important;
   }
-  
+
   /* Featured Items */
   .items-list .item a .overlay {
     position: absolute;
@@ -436,34 +443,34 @@ div.content-block.less-padding.min-height .header-label {
     pointer-events: none;
     opacity: 0;
     transition: all 0.0s; }
-  
+
   .items-list .slick-prev {
     left: -25px; }
-  
+
   .items-list .slick-next {
     right: -25px; }
-  
+
   .items-list .item a:hover .overlay {
     opacity: 0.5;
   }
-  
+
  /* Item Show Page */
 
-/* Large image hover */ 
+/* Large image hover */
 #image-gallery > li:hover {
    opacity: 1; }
 #image-gallery > li {
      opacity: 1;
      transition: all 0s !important;
      cursor: pointer; }
- 
+
  /* Item Navigation - previous/next buttons */
- 
+
  div.itemshow ul.pager {
  	width: 94%;
  	margin-right: auto;
  }
- 
+
  /* Footer */
 footer {
   padding: 25px 0; }
@@ -485,7 +492,7 @@ footer p > a {
 footer .partners img {
 	margin-bottom: 10px;
 	margin-right: 5px; }
-	
+
 /* Exhibitions Page */
 
 .exhibit-browse-image {
@@ -497,4 +504,84 @@ footer .partners img {
 	height: 200px;
 	float: left;
 	margin-right: 30px;
+}
+
+/* Collection Show Page */
+
+.browse-items .item .img {
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  background-position: center center; }
+
+	/* Tag Cloud */
+
+	.popular {
+			font-size: 100%;
+	}
+	
+	.v-popular {
+			font-size: 120%;
+	}
+
+	.vv-popular {
+			font-size: 140%;
+	}
+
+	.vvv-popular {
+			font-size: 160%;
+	}
+
+	.vvvv-popular {
+			font-size: 180%;
+	}
+
+	.vvvvv-popular {
+			font-size: 200%;
+	}
+
+	.vvvvvv-popular {
+			font-size: 220%;
+	}
+
+	.vvvvvvv-popular {
+			font-size: 240%;
+	}
+
+	.vvvvvvvv-popular {
+			font-size: 230%;
+	}
+
+/* Items Browse Page */
+
+#item-filters ul {
+	margin-left: -40px;
+}
+
+#item-filters ul li.search {
+	list-style-type: none;
+	background-color: #e9e9e9;
+	display: inline;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#item-filters ul li.collection {
+	list-style-type: none;
+	background-color: #e9e9e9;
+	display: inline;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#item-filters ul li.advanced {
+	list-style-type: none;
+	background-color: #e9e9e9;
+	display: inline;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#item-filters {
+	margin-bottom: 20px;
 }
