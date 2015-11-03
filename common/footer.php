@@ -30,7 +30,7 @@
         <div class="container">
             <div class="close">&times;</div>
             <span class="glyphicon glyphicon-search"></span>
-            <form id="search-omeka-container" action="<?php echo public_url(''); ?>search" class="clearfix">
+            <form id="search-omeka-container" action="<?php echo public_url(''); ?>items/browse" class="clearfix">
                 <?php echo search_form(array('show_advanced' => false)); ?>
             </form>
             <?php
@@ -62,5 +62,15 @@
     </div>
 	<?php fire_plugin_hook('public_footer'); ?>
 </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61445043-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
