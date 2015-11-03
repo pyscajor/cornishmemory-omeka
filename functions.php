@@ -71,7 +71,7 @@ function sckls_random_featured_collection() {
 // -- Random Featured Item
 function sckls_random_featured_item() {
     $html = '';
-    $items = get_records('Item', array('featured' => true), 1);
+    $items = get_records('Item', array('featured' => true, 'sort_field' => 'random'), 1);
     set_loop_records('items', $items);
     if (has_loop_records('items')){
         foreach (loop('items') as $item){
@@ -236,7 +236,7 @@ function sckls_item_image_gallery($attrs = array(), $imageType = 'fullsize', $fi
         }  elseif (strstr($mime, 'video') == true) {
            $html .= '<ul id="show-item-av"><li data-src="' . $file->getWebPath('original') . '"><video src="' . $file->getWebPath('original') . '" width="100%" controls></video>';
 		   $html;
-        } 
+        }
 	  		elseif (strstr($mime, 'audio') == true) {
 	            $html .= '<ul id="show-item-av"><li data-src="' . $file->getWebPath('original') . '"><img src="/cm-images/audio-placeholder.png" alt="Audio recording" id="audioplaceholder" /><audio src="' . $file->getWebPath('original') . '" width="100%" controls></audio>';
 	 		   $html;
