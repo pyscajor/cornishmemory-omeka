@@ -37,9 +37,8 @@
                         <div class="content-block less-padding min-height">
 							<div class="featured">
 								<h6 class="header-label">Search the Archive</h6>
-									<div class="overlay"></div>
 									<div style="background-image: url(/cm-images/por016_access.jpg);" class="img"></div>
-									<span class="maptitle"><form id="search-form" name="search-form" action="/search" method="get"><input type="text" name="query" id="query" value="" class="form-control" placeholder="Type here then press enter"></form></span>
+									<span class="maptitle"><form id="search-form" name="search-form" action="/items/browse" method="get"><input type="text" name="search" id="search" value="" class="form-control" placeholder="Type here then press enter"></form></span>
 							</div>
                         </div>
                     </div>
